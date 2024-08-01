@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkspaceComponent } from './workspace.component';
+import { AppBarComponent } from './app-bar.component';
 
-describe('WorkspaceComponent', () => {
-  let component: WorkspaceComponent;
-  let fixture: ComponentFixture<WorkspaceComponent>;
+describe('AppBarComponent', () => {
+  let component: AppBarComponent;
+  let fixture: ComponentFixture<AppBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WorkspaceComponent]
+      imports: [AppBarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WorkspaceComponent);
+    fixture = TestBed.createComponent(AppBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

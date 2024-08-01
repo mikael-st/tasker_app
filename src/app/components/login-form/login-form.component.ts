@@ -3,6 +3,7 @@ import { TextFieldComponent } from '../text-field/text-field.component';
 
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroUserSolid } from '@ng-icons/heroicons/solid';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login-form',
@@ -16,5 +17,11 @@ import { heroUserSolid } from '@ng-icons/heroicons/solid';
   styleUrl: './login-form.component.scss'
 })
 export class LoginFormComponent {
+  constructor (private router: Router) {}
 
+  login() {
+    console.log('HI');
+    
+    this.router.navigate(['/workspace']);
+  }
 }
