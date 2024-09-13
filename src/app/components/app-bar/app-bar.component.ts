@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroBellSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
-  selector: 'app-app-bar',
+  selector: 'app-bar',
   standalone: true,
-  imports: [],
+  imports: [
+    NgIconComponent
+  ],
+  providers: [ provideIcons({ heroBellSolid }) ],
   templateUrl: './app-bar.component.html',
   styleUrl: './app-bar.component.scss'
 })
-export class AppBarComponent {
+export class AppBar {
 
 }
