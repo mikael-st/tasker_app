@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginPage } from '../pages/login-page/login-page.component';
-import { Workspace } from '../pages/workspace/workspace.component';
+import { Home } from '../pages/home/home.component';
 import { HomeComponent } from '../components/home/home.component';
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { InboxComponent } from '../components/inbox/inbox.component';
@@ -18,7 +18,7 @@ export const routes: Routes = [
   },
   {
     path: 'workspace',
-    component: Workspace,
+    component: Home,
     children: [
       {
         path: '',

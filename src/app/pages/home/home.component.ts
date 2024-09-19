@@ -4,16 +4,16 @@ import { NavBarComponent } from '../../components/nav-bar/nav-bar.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'workspace',
+  selector: 'home',
   standalone: true,
   imports: [
     RouterOutlet,
     AppBar,
     NavBarComponent
   ],
-  templateUrl: './workspace.component.html',
-  styleUrl: './workspace.component.scss'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
-export class Workspace {
+export class Home {
 
 }
