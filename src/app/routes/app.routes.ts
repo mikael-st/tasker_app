@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { LoginPage } from '../pages/login-page/login-page.component';
 import { Home } from '../pages/home/home.component';
-import { HomeComponent } from '../components/home/home.component';
-import { ProjectsComponent } from '../components/projects/projects.component';
-import { InboxComponent } from '../components/inbox/inbox.component';
-import { AffiliationsComponent } from '../components/affiliations/affiliations.component';
+import { Workspace } from '../components/workspace/workspace.component';
+import { Projects } from '../components/projects/projects.component';
+import { Inbox } from '../components/inbox/inbox.component';
+import { Affiliations } from '../components/affiliations/affiliations.component';
 
 export const routes: Routes = [
   {
@@ -17,24 +17,24 @@ export const routes: Routes = [
     component: LoginPage
   },
   {
-    path: 'workspace',
+    path: 'home',
     component: Home,
     children: [
       {
-        path: '',
-        component: HomeComponent
+        path: 'workspace',
+        component: Workspace
       },
       {
         path: 'projects',
-        component: ProjectsComponent
+        component: Projects
       },
       {
         path: 'inbox',
-        component: InboxComponent
+        component: Inbox
       },
       {
         path: 'affiliations',
-        component: AffiliationsComponent
+        component: Affiliations
       }
     ]
   }

@@ -22,6 +22,6 @@ export class LoginFormComponent {
   login() {
     console.log('HI');
     
-    this.router.navigate(['/workspace']);
+    this.router.navigate(['/home/workspace']);
   }
 }

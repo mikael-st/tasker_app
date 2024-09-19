@@ -28,6 +28,6 @@ export class NavBarComponent {
   go(page: string) {
     console.log(`go to ${page}`);
     
-    this.router.navigate([`workspace/${page}`]);
+    this.router.navigate([`home/${page}`]);
   }
 }
