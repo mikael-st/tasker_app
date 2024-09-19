@@ -1,15 +1,14 @@
 @import "../../../../assets/styles/palette.scss";
 
 .progress {
-  display: grid;
-  grid-auto-flow: column;
-
+  display: flex;
   align-items: center;
 
   font-weight: bold;
 
   p {
     font-size: 14px;
+    margin-left: 10px;
   }
   
   .status {

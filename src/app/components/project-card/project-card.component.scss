@@ -18,4 +18,16 @@
     grid-auto-flow: row;
     gap: 10px;
   }
+
+  .infos {
+    display: grid;
+    grid-template: "progress team"
+                   "date date";
+    gap: 10px;
+    align-items: center;
+
+    #progress { grid-area: progress; }
+    #team { grid-area: team; margin-left: 20px; }
+    #date { grid-area: date; }
+  }
 }

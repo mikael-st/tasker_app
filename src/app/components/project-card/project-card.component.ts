@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProgressLabel } from '../labels/progress-label/progress-label.component';
 import { DateLabel } from '../labels/date-label/date-label.component';
 import { Team } from '../team/team.component';
-import { Avatar } from '../avatar/avatar.component';
+import { Project } from '../../service/project';
 
 @Component({
   selector: 'project-card',
@@ -16,5 +16,8 @@ import { Avatar } from '../avatar/avatar.component';
   styleUrl: './project-card.component.scss'
 })
 export class ProjectCard {
-
+  @Input() data: Project = {
+    title: 'projeto',
+    description: 'projeto teste'
+  };
 }
