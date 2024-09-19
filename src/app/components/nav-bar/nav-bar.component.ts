@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgIconComponent, NgIconsModule, provideIcons } from '@ng-icons/core';
 import { heroArrowLeftStartOnRectangleSolid, heroBuildingOfficeSolid, heroChatBubbleOvalLeftSolid, heroCog6ToothSolid, heroInboxStackSolid, heroWindowSolid } from '@ng-icons/heroicons/solid';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'nav-bar',
@@ -20,5 +21,13 @@ import { heroArrowLeftStartOnRectangleSolid, heroBuildingOfficeSolid, heroChatBu
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
+  constructor (
+    private readonly router: Router
+  ){}
 
+  go(page: string) {
+    console.log(`go to ${page}`);
+    
+    this.router.navigate([`workspace/${page}`]);
+  }
 }
