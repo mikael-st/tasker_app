@@ -1,0 +1,21 @@
+@import '../../../assets/styles/palette.scss';
+
+.project-card {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 65px;
+
+  padding: 16px 10px 12px 10px;
+
+  width: fit-content; height: fit-content;
+
+  border-radius: 12px;
+
+  background-color: $items;
+
+  .header {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+  }
+}

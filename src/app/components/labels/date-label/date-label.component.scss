@@ -1,0 +1,11 @@
+@import '../../../../assets/styles/palette.scss';
+
+.date {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+
+  p {
+    font-size: 14px;
+  }
+}

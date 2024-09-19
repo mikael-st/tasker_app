@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { ProgressLabel } from '../labels/progress-label/progress-label.component';
+import { DateLabel } from '../labels/date-label/date-label.component';
 
 @Component({
-  selector: 'app-project-card',
+  selector: 'project-card',
   standalone: true,
-  imports: [],
+  imports: [
+    ProgressLabel,
+    DateLabel
+  ],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })
-export class ProjectCardComponent {
+export class ProjectCard {
 
 }
