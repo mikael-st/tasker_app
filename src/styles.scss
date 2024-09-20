@@ -9,7 +9,9 @@
   background-color: $content;
 
   .content {
+    height: 100%; width: 100%;
     overflow: hidden;
+    border: 1px solid purple;
   }
   //
   // display: grid;

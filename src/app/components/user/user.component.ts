@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { Avatar } from '../avatar/avatar.component';
 
 @Component({
-  selector: 'app-user',
+  selector: 'user',
   standalone: true,
-  imports: [],
+  imports: [
+    Avatar
+  ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })
-export class UserComponent {
-
-}
+export class User {}

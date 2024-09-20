@@ -1,5 +1,44 @@
+@import '../../../assets/styles/palette.scss';
+
 .content {
+  display: grid;
+  grid-template: "recent friends"
+                 "week friends" / 1fr .25fr;
+  gap: 20px;
+
   .recent {
-    padding: 30px 0px 0px 20px;
+    grid-area: recent;
+    
+    overflow-x: hidden;
+    
+    border: 1px solid green;
+    
+    padding: 30px 20px 0px 20px;
+  }
+
+  .friends {
+    grid-area: friends;
+
+    padding: 20px 0px 0px 20px;
+    
+    border-left: 2px solid $items;
+  
+    border: 1px solid yellow;
+
+    overflow-y: hidden;
+  }
+
+  .week {
+    grid-area: week;
+    display: grid;
+    gap: 22px;
+
+    width: fit-content;
+
+    overflow-y: hidden;
+
+    padding: 20px 0px 0px 20px;
+
+    border: 1px solid red;
   }
 }

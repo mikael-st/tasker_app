@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { ProgressLabel } from '../labels/progress-label/progress-label.component';
-import { DateLabel } from '../labels/date-label/date-label.component';
-import { Team } from '../team/team.component';
-import { Project } from '../../service/project';
+import { ProgressLabel } from '../../labels/progress-label/progress-label.component';
+import { DateLabel } from '../../labels/date-label/date-label.component';
+import { Team } from '../../team/team.component';
+import { Project } from '../../../service/project';
 
 @Component({
   selector: 'project-card',
