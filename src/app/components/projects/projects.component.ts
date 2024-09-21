@@ -5,6 +5,9 @@ import { Avatar } from '../avatar/avatar.component';
 import { Team } from '../team/team.component';
 import { ProgressLabel } from '../labels/progress-label/progress-label.component';
 import { ScrollerComponent } from '../misc/scroller/scroller.component';
+import { PaginatorModule } from "primeng/paginator";
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroChevronDoubleLeftMini, heroChevronDoubleRightMini } from '@ng-icons/heroicons/mini';
 
 @Component({
   selector: 'projects',
@@ -15,11 +18,22 @@ import { ScrollerComponent } from '../misc/scroller/scroller.component';
     Avatar,
     Team,
     ProgressLabel,
-    ScrollerComponent
+    ScrollerComponent,
+    PaginatorModule,
+    NgIconComponent
+  ],
+  providers: [
+    provideIcons({
+      heroChevronDoubleLeftMini,
+      heroChevronDoubleRightMini
+    })
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class Projects {
-  rows = Array.from({ length: 3 }, (_, i) => i);
+  first: number = 0;
+  pages: number = 10;
+
+  rows = Array.from({ length: 6 }, (_, i) => i);
 }
