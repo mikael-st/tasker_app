@@ -1,6 +1,6 @@
 .scrllr-horizontal {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  flex-direction: row;
   gap: 12px;
 
   overflow-x: scroll;
@@ -11,6 +11,10 @@
 }
 
 .scrllr-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
   overflow-y: scroll;
 
   height: 100%;

@@ -1,0 +1,15 @@
+.create-project-btn {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+
+  background: none;
+
+  padding: 11px 20px;
+  margin: 20px 20px 0px 0px;
+
+  border: 2px solid white;
+  border-radius: 9999px;
+
+  font-weight: bold;
+}

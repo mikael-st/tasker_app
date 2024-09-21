@@ -1,1 +1,26 @@
-<p>projects works!</p>
+<div class="content">
+  <create-project-btn/>
+  <search/>
+  <table id="projects">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Owner</th>
+        <th>Progress</th>
+        <th>Started at</th>
+        <th>Members</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track row) {
+        <tr>
+          <td>Title</td>
+          <td><avatar size="small"/></td>
+          <td><progress-label/></td>
+          <td>00d:h:min</td>
+          <td><team/></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
