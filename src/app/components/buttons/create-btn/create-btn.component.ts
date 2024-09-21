@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroPlusSmallSolid, heroPlusSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
-  selector: 'create-project-btn',
+  selector: 'create-btn',
   standalone: true,
   imports: [
     NgIconComponent
@@ -13,9 +13,9 @@ import { heroPlusSmallSolid, heroPlusSolid } from '@ng-icons/heroicons/solid';
       heroPlusSolid
     })
   ],
-  templateUrl: './create-project.component.html',
-  styleUrl: './create-project.component.scss'
+  templateUrl: './create-btn.component.html',
+  styleUrl: './create-btn.component.scss'
 })
-export class CreateProjectButton {
-
+export class CreateButton {
+  @Input() text: string = '';
 }

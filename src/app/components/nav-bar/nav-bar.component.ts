@@ -24,10 +24,11 @@ export class NavBarComponent {
   constructor (
     private readonly router: Router
   ){}
+  page: 'workspace' | 'projects' | 'inbox' | 'affiliations' = 'workspace';
 
-  go(page: string) {
+  go(page: 'workspace' | 'projects' | 'inbox' | 'affiliations') {
     console.log(`go to ${page}`);
-    
+    this.page = page;
     this.router.navigate([`home/${page}`]);
   }
 }

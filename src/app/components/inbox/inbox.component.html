@@ -1,1 +1,9 @@
-<p>inbox works!</p>
+<div class="content">
+  <create-btn>New group chat</create-btn>
+  <search/>
+  <div id="chats">
+    @for (chat of chats; track chat) {
+      <chat-card/>
+    }
+  </div>
+</div>

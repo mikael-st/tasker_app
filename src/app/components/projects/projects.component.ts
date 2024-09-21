@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CreateProjectButton } from '../buttons/create-project/create-project.component';
+import { CreateButton } from '../buttons/create-btn/create-btn.component';
 import { SearchComponent } from '../misc/search/search.component';
 import { Avatar } from '../avatar/avatar.component';
 import { Team } from '../team/team.component';
 import { ProgressLabel } from '../labels/progress-label/progress-label.component';
 import { ScrollerComponent } from '../misc/scroller/scroller.component';
-import { PaginatorModule } from "primeng/paginator";
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDoubleLeftMini, heroChevronDoubleRightMini } from '@ng-icons/heroicons/mini';
 
@@ -13,13 +12,12 @@ import { heroChevronDoubleLeftMini, heroChevronDoubleRightMini } from '@ng-icons
   selector: 'projects',
   standalone: true,
   imports: [
-    CreateProjectButton,
+    CreateButton,
     SearchComponent,
     Avatar,
     Team,
     ProgressLabel,
     ScrollerComponent,
-    PaginatorModule,
     NgIconComponent
   ],
   providers: [
