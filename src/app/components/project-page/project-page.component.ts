@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProjectMenu } from '../navbars/project-menu/project-menu.component';
+import { ProjectMenu } from '../toolbars/project-menu/project-menu.component';
 
 @Component({
   selector: 'app-project-page',

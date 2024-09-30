@@ -1,1 +1,18 @@
-<p>important-dates works!</p>
+<div class="important-dates">
+  <h6>Important dates</h6>
+
+  <div id="scroller">
+    @for (month of months; track month) {
+      <div id="month">
+        <p id="tag">Month, YYYY</p>
+  
+        @for (event of month.events; track event) {
+          <div id="event">
+            <p>DD</p>
+            <h6>Title</h6>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

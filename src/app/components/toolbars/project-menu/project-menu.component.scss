@@ -1,8 +1,8 @@
 @import '../../../../assets/styles/palette.scss';
 
 .project-menu {
+  grid-area: project-menu;
   display: flex;
-  border: 1px solid yellow;
   
   button {
     display: flex;

@@ -1,14 +1,15 @@
 @import '../../../../assets/styles/palette.scss';
 
 .overview {
-  border: 1px solid purple;
-
+  margin-left: 20px;
+  
   height: 100%;
   overflow: hidden;
   
   display: grid;
-  grid-template: "abstract abstract" .5fr
-                 "important-tasks recent-messages" 1fr / 1fr 1fr;
+  grid-template: "project-menu project-menu important-dates"
+                 "abstract abstract important-dates" .5fr
+                 "important-tasks recent-messages important-dates" 1fr / min-content 1fr .5fr;
   gap: 20px;
 
   .abstract {
@@ -54,13 +55,13 @@
 
   .important-tasks {
     grid-area: important-tasks;
-
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
-
+    
     overflow-y: hidden;
-
+    
     width: fit-content; height: 100%;
     border: 1px solid orange;
 
@@ -82,7 +83,7 @@
 
     overflow-y: hidden;
 
-    width: fit-content; height: 100%;
+    width: 100%; height: 100%;
     border: 1px solid orange;
 
     #scroller {
@@ -91,5 +92,9 @@
       
       overflow-y: scroll;
     }
+  }
+
+  #important-dates {
+    grid-area: important-dates;
   }
 }
