@@ -1,0 +1,27 @@
+@import '../../../../assets/styles/palette.scss';
+
+.overview {
+  #resume {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid green;
+  }
+  #infos {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+
+    #tasks {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #stage {
+      width: 200px; height: fit-content;
+      padding: 10px 0px 10px 0px;
+      border-radius: 6px;
+      background-color: $blue;
+    }
+  }
+}

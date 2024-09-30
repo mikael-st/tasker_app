@@ -5,6 +5,9 @@
 @import "./assets/styles/palette.scss";
 
 .page {
+  h6 {
+    font-weight: 600;
+  }
   width: 100vw; height: 100vh;
   background-color: $content;
 
@@ -13,8 +16,4 @@
     overflow: hidden;
     // border: 1px solid purple;
   }
-  //
-  // display: grid;
-  // grid-template: "appbar appbar" min-content
-  //               "navbar content" / auto 1fr auto;
 }

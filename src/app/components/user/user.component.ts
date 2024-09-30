@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Avatar } from '../avatar/avatar.component';
 
 @Component({
@@ -10,4 +10,7 @@ import { Avatar } from '../avatar/avatar.component';
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })
-export class User {}
+export class User {
+  @Input() size: 'small' | 'medium' | 'large' = 'small';
+
+}

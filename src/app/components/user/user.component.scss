@@ -9,18 +9,18 @@
 
   width: fit-content;
 
-  font-weight: bold;
+  font-weight: 500;
   
   #avatar {
     position: relative;
-    #status {
-      left: 38px;
-      top: 4px;
-      position: absolute;
-      background-color: $blue;
-      width: 14px; height: 14px;
-      outline: 3px solid $content;
-      border-radius: 9999px;
-    }
+    // #status {
+    //   left: 38px;
+    //   top: 4px;
+    //   position: absolute;
+    //   background-color: $blue;
+    //   width: 14px; height: 14px;
+    //   outline: 3px solid $content;
+    //   border-radius: 9999px;
+    // }
   }
 }

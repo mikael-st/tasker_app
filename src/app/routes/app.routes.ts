@@ -7,6 +7,10 @@ import { Inbox } from '../components/inbox/inbox.component';
 import { Affiliations } from '../components/affiliations/affiliations.component';
 import { ProjectPage } from '../components/project-page/project-page.component';
 import path from 'path';
+import { OverviewComponent } from '../components/project-page/overview/overview.component';
+import { MembersComponent } from '../components/project-page/members/members.component';
+import { TasksComponent } from '../components/project-page/tasks/tasks.component';
+import { CalendarComponent } from '../components/project-page/calendar/calendar.component';
 
 const ProjectsRoute: Route = {
   path: 'projects',
@@ -23,6 +27,11 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home/project',
+    redirectTo: 'home/project/overview',
     pathMatch: 'full'
   },
   { 
@@ -44,20 +53,24 @@ export const routes: Routes = [
       {
         path: 'project',
         component: ProjectPage,
-        // children: [
-        //   {
-        //     path: 'overview'
-        //   },
-        //   {
-        //     path: 'members'
-        //   },
-        //   {
-        //     path: 'members'
-        //   },
-        //   {
-        //     path: 'calendar'
-        //   }
-        // ]
+        children: [
+          {
+            path: 'overview',
+            component: OverviewComponent
+          },
+          {
+            path: 'tasks',
+            component: TasksComponent
+          },
+          {
+            path: 'members',
+            component:MembersComponent,
+          },
+          {
+            path: 'calendar',
+            component:CalendarComponent
+          }
+        ],
       },
       {
         path: 'inbox',
