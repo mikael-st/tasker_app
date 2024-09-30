@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgIconComponent, NgIconsModule, provideIcons } from '@ng-icons/core';
-import { heroArrowLeftStartOnRectangleSolid, heroBuildingOfficeSolid, heroChatBubbleOvalLeftSolid, heroCog6ToothSolid, heroInboxStackSolid, heroWindowSolid } from '@ng-icons/heroicons/solid';
+import { heroArrowLeftStartOnRectangleSolid, heroBuildingOfficeSolid, heroChatBubbleOvalLeftSolid, heroCog6ToothSolid, heroInboxStackSolid, heroUsersSolid, heroWindowSolid } from '@ng-icons/heroicons/solid';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,8 +14,8 @@ import { Router } from '@angular/router';
     heroInboxStackSolid,
     heroCog6ToothSolid,
     heroChatBubbleOvalLeftSolid,
-    heroBuildingOfficeSolid,
-    heroArrowLeftStartOnRectangleSolid
+    heroArrowLeftStartOnRectangleSolid,
+    heroUsersSolid
   }) ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'

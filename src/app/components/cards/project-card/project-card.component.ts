@@ -3,6 +3,7 @@ import { ProgressLabel } from '../../labels/progress-label/progress-label.compon
 import { DateLabel } from '../../labels/date-label/date-label.component';
 import { Team } from '../../team/team.component';
 import { Project } from '../../../service/project';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'project-card',
@@ -16,8 +17,16 @@ import { Project } from '../../../service/project';
   styleUrl: './project-card.component.scss'
 })
 export class ProjectCard {
+  constructor (private router: Router) {}
+  
   @Input() data: Project = {
     title: 'projeto',
     description: 'projeto teste'
   };
+
+  openProject() {
+    console.log('clicado');
+    
+    this.router.navigate(['/home/project']);
+  }
 }
