@@ -1,31 +1,50 @@
 <div class="overview">
-  <div id="resume">
-    <div>
-      <h6>Project name</h6>
-      <p>description</p>
-    </div>
-    <div id="owner">
-      <h6>Owner</h6>
-      <user/>
-    </div>
-  </div>
-  <div id="infos">
-    <div id="date">
-      Due date
-      <date-label/>
-    </div>
-    <div id="tasks">
-      <circular-progress-bar/>
+  <!-- <project-menu /> -->
+  <div class="abstract">
+    <div id="resume">
       <div>
-        <h6>Tasks done</h6>
-        00 out of 00
+        <h6 id="title">Project name</h6>
+        <p>description</p>
+      </div>
+      <div id="owner">
+        <h6>Owner</h6>
+        <user/>
       </div>
     </div>
-    <select name="stage" id="stage">
-      <option value="PENDING">PENDING</option>
-      <option value="DEVELOPMENT">DEVELOPMENT</option>
-      <option value="PAUSED">PAUSED</option>
-      <option value="DONE">DONE</option>
-    </select>
+    <div id="infos">
+      <div id="date">
+        <h6>Due date</h6>
+        <date-label/>
+      </div>
+      <div id="tasks">
+        <circular-progress-bar/>
+        <div>
+          <h6>Tasks done</h6>
+          00 out of 00
+        </div>
+      </div>
+      <select name="stage" id="stage">
+        <option id="item" value="PENDING">PENDING</option>
+        <option id="item" value="DEVELOPMENT">DEVELOPMENT</option>
+        <option id="item" value="PAUSED">PAUSED</option>
+        <option id="item" value="DONE">DONE</option>
+      </select>
+    </div>
+  </div>
+  <div class="important-tasks">
+    <h6>Most important</h6>
+    <div id="scroller">
+      @for (task of tasks; track task) {
+        <task-card/>
+      }
+    </div>
+  </div>
+  <div class="recent-messages">
+    <h6>Recent messages</h6>
+    <div id="scroller">
+      @for (task of tasks; track task) {
+        <message-card/>
+      }
+    </div>
   </div>
 </div>

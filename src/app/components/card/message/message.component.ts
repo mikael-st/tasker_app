@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { Avatar } from '../../avatar/avatar.component';
+import { Badge } from '../../labels/badge/badge.component';
+
+@Component({
+  selector: 'message-card',
+  standalone: true,
+  imports: [
+    Avatar,
+    Badge
+  ],
+  templateUrl: './message.component.html',
+  styleUrl: './message.component.scss'
+})
+export class MessageCard {
+
+}

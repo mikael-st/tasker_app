@@ -1,27 +1,95 @@
 @import '../../../../assets/styles/palette.scss';
 
 .overview {
-  #resume {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid green;
-  }
-  #infos {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid red;
+  border: 1px solid purple;
 
-    #tasks {
+  height: 100%;
+  overflow: hidden;
+  
+  display: grid;
+  grid-template: "abstract abstract" .5fr
+                 "important-tasks recent-messages" 1fr / 1fr 1fr;
+  gap: 20px;
+
+  .abstract {
+    grid-area: abstract;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 100%;
+    border: 1px solid green;
+
+    #resume {
+      display: flex;
+      justify-content: space-between;
+
+      #title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    #infos {
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
+      border: 1px solid red;
+  
+      #tasks {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+  
+      #stage {
+        width: 210px; height: fit-content;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: $blue;
+        font-weight: 600;
+      }
     }
+  }
 
-    #stage {
-      width: 200px; height: fit-content;
-      padding: 10px 0px 10px 0px;
-      border-radius: 6px;
-      background-color: $blue;
+  .important-tasks {
+    grid-area: important-tasks;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    overflow-y: hidden;
+
+    width: fit-content; height: 100%;
+    border: 1px solid orange;
+
+    #scroller {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      
+      overflow-y: scroll;
+    }
+  }
+
+  .recent-messages {
+    grid-area: recent-messages;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    overflow-y: hidden;
+
+    width: fit-content; height: 100%;
+    border: 1px solid orange;
+
+    #scroller {
+      display: flex;
+      flex-direction: column;
+      
+      overflow-y: scroll;
     }
   }
 }

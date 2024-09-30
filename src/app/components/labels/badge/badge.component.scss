@@ -1,0 +1,8 @@
+@import '../../../../assets/styles/palette.scss';
+
+.badge {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: $lightRed;
+}
