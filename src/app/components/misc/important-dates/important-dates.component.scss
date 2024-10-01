@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 22px;
-    
+
     overflow-y: scroll;
 
     #month {
@@ -39,8 +39,16 @@
           padding: 12px;
           border-left: 2px solid $blue;
         }
+
+        #day {
+          text-align: center;
+        
+          #name {
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
       }
-  
     }
   }
 }
