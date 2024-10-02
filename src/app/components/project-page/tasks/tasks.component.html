@@ -1,1 +1,41 @@
-<p>tasks works!</p>
+<div class="tasks">
+  <div id="header">
+    <project-menu/>
+    <create-btn>New Task</create-btn>
+  </div>
+  <search/>
+  <div id="steps">
+    <div class="step">
+      <h6>Pending</h6>
+      <div id="scroller">
+        @for (task of tasks; track task) {
+          <task-card/>
+        }
+      </div>
+    </div>
+    <div class="step">
+      <h6>Development</h6>
+      <div id="scroller">
+        @for (task of tasks; track task) {
+          <task-card/>
+        }
+      </div>
+    </div>
+    <div class="step">
+      <h6>Review</h6>
+      <div id="scroller">
+        @for (task of tasks; track task) {
+          <task-card/>
+        }
+      </div>
+    </div>
+    <div class="step">
+      <h6>Done</h6>
+      <div id="scroller">
+        @for (task of tasks; track task) {
+          <task-card/>
+        }
+      </div>
+    </div>
+  </div>
+</div>

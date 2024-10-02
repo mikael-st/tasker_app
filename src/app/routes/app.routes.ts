@@ -6,11 +6,10 @@ import { Projects } from '../components/projects/projects.component';
 import { Inbox } from '../components/inbox/inbox.component';
 import { Affiliations } from '../components/affiliations/affiliations.component';
 import { ProjectPage } from '../components/project-page/project-page.component';
-import path from 'path';
 import { OverviewComponent } from '../components/project-page/overview/overview.component';
 import { MembersComponent } from '../components/project-page/members/members.component';
 import { TasksComponent } from '../components/project-page/tasks/tasks.component';
-import { CalendarComponent } from '../components/project-page/calendar/calendar.component';
+import { Events } from '../components/project-page/events/events.component';
 
 const ProjectsRoute: Route = {
   path: 'projects',
@@ -68,7 +67,7 @@ export const routes: Routes = [
           },
           {
             path: 'calendar',
-            component:CalendarComponent
+            component: Events
           }
         ],
       },

@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/palette.scss';
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  height: 100%;
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+
+  #steps {
+    display: flex;
+    justify-content: space-around;
+    // gap: 12px;
+
+    padding: 10px;
+    
+    overflow: hidden;
+    
+    height: 100%;
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      background-color: $tool-bars;
+      
+      overflow: hidden;
+
+      padding: 20px;
+
+      border-radius: 12px;
+
+      height: 100%; width: fit-content;
+
+      #scroller {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        height: 100%;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../../../assets/styles/palette.scss';
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 20px;
+
+  height: 100%;
+  
+  padding: 0px 20px;
+  
+  border: 1px solid red;
+
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    width: 100%;
+
+    background-color: $items;
+
+    #actions button {
+      background: none;
+
+      ng-icon {
+        display: flex;
+        fill: $tool_bars;
+        color: $tool_bars;
+      }
+      
+    }
+  }
+
+  #weeks {
+    display: flex;
+    border: 1px solid green;
+    height: 100%; width: 100%;
+
+    #weekdays {
+      width: 100%;
+      display: flex;
+
+      #weekday {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid $gray;
+        width: 100%; height: fit-content;
+
+        #day {
+          border: none;
+        }
+      }
+    }
+  }
+}

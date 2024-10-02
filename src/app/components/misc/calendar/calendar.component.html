@@ -1,0 +1,25 @@
+<div class="calendar">
+  <div id="header">
+    <h6>{{month}}, {{year}}</h6>
+    <div id="actions">
+      <button type="button">
+        <ng-icon name="heroChevronLeftMini" size="32"></ng-icon>
+      </button>
+      <button type="button">
+        <ng-icon name="heroChevronRightMini" size="32" ></ng-icon>
+      </button>
+    </div>
+  </div>
+  <div id="weeks">
+    <div id="weekdays">
+      @for (week of days; track week) {
+        <ul id="weekday">
+          {{week.weekday}}
+          @for (day of week.days; track day) {
+            <li id="day">{{day}}</li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+</div>
