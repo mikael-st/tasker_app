@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroCalendarMini, heroChevronDownMini } from '@ng-icons/heroicons/mini';
 import { CalendarTag } from '../calendar-tag/calendar-tag.component';
@@ -22,7 +22,7 @@ import { DateTime } from 'luxon';
   templateUrl: './event-accordion.component.html',
   styleUrl: './event-accordion.component.scss'
 })
-export class EventAccordion implements OnInit {
+export class EventAccordion implements OnInit, OnChanges {
   private today: DateTime = DateTime.local();
 
   @Input() date: {
@@ -41,6 +41,14 @@ export class EventAccordion implements OnInit {
     this.contentOn = this.isToday();
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.sameMonth() && this.isToday()) {
+      this.contentOn = true;
+      return;
+    }
+    this.contentOn = false;
+  }
+
   showContent() {
     console.log('showing content? '+this.contentOn);
     
@@ -50,8 +58,14 @@ export class EventAccordion implements OnInit {
   isToday(): boolean {
     return this.date.day === this.today.day.toString()
             &&
-           this.date.month.toLowerCase() === this.today.monthShort?.replace('.', '')
+           this.sameMonth()
              ? true
              : false
+  }
+
+  sameMonth(): boolean {
+    return this.date.month.toLowerCase() === this.today.monthShort?.replace('.', '')
+            ? true
+            : false
   }
 }

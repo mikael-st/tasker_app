@@ -5,18 +5,23 @@
   
   #tag {
     display: flex;
-    align-items: center;
     gap: 8px;
   
-    padding: 4px;
+    padding: 8px 12px;
     margin: 0px 6px;
 
     border-radius: 4px;
-
-    background-color: $blue;
   
     ng-icon {
       display: flex;
     }
+  }
+
+  .task-tag {
+    background-color: $blue;
+  }
+
+  .event-tag {
+    background-color: $light_blue;
   }
 }
