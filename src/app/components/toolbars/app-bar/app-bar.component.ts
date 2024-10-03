@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroBellSolid } from '@ng-icons/heroicons/solid';
+import { heroBellSolid, heroClipboardSolid } from '@ng-icons/heroicons/solid';
 import { Avatar } from '../../avatar/avatar.component';
 
 @Component({
@@ -10,7 +10,12 @@ import { Avatar } from '../../avatar/avatar.component';
     NgIconComponent,
     Avatar
   ],
-  providers: [ provideIcons({ heroBellSolid }) ],
+  providers: [ 
+    provideIcons({ 
+      heroBellSolid,
+      heroClipboardSolid
+    })
+  ],
   templateUrl: './app-bar.component.html',
   styleUrl: './app-bar.component.scss'
 })

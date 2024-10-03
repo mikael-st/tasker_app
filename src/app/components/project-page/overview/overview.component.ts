@@ -3,7 +3,7 @@ import { User } from '../../user/user.component';
 import { DateLabel } from '../../labels/date-label/date-label.component';
 import { CircularProgressBar } from '../../misc/c-progress-bar/c-progress-bar.component';
 import { TaskCard } from '../../cards/task-card/task-card.component';
-import { MessageCard } from '../../card/message/message.component';
+import { MessageCard } from '../../cards/message/message.component';
 import { ImportantDates } from '../../misc/important-dates/important-dates.component';
 import { ProjectMenu } from '../../toolbars/project-menu/project-menu.component';
 

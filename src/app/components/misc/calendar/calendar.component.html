@@ -1,22 +1,31 @@
 <div class="calendar">
   <div id="header">
-    <h6>{{month}}, {{year}}</h6>
+    <h6>{{month}}, {{firstDay.year}}</h6>
     <div id="actions">
       <button type="button">
         <ng-icon name="heroChevronLeftMini" size="32"></ng-icon>
       </button>
-      <button type="button">
+      <button type="button" (click)="print()">
         <ng-icon name="heroChevronRightMini" size="32" ></ng-icon>
       </button>
     </div>
   </div>
   <div id="weeks">
     <div id="weekdays">
-      @for (week of days; track week) {
+      @for (weekday of weekdays; track $index) {
         <ul id="weekday">
-          {{week.weekday}}
-          @for (day of week.days; track day) {
-            <li id="day">{{day}}</li>
+          {{weekday}}
+          @for (day of days; track $index) {
+            @if (day.weekday === (weekdays.indexOf(weekday)+1)) {
+              <li id="day"
+                [ngClass]="{
+                  'inactive-day': day.month !== firstDay.month,
+                  'active-day': day.month === firstDay.month
+                }"
+              >
+                {{day.day}}
+              </li>
+            }
           }
         </ul>
       }

@@ -1,12 +1,15 @@
-import { Component, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Inject, Input, signal, Signal } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronLeftMini, heroChevronRightMini } from '@ng-icons/heroicons/mini';
+import { DateTime, Info, Interval } from 'luxon';
 
 @Component({
   selector: 'calendar',
   standalone: true,
   imports: [
-    NgIconComponent
+    NgIconComponent,
+    CommonModule
   ],
   providers: [
     provideIcons({
@@ -18,62 +21,38 @@ import { heroChevronLeftMini, heroChevronRightMini } from '@ng-icons/heroicons/m
   styleUrl: './calendar.component.scss'
 })
 export class Calendar {
-  private today = new Date();
+  @Input() class: string = '';
 
-  months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ]
-  weekdays = [
-    'Sun',
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-    'Sat',
-  ]
+  private today: DateTime = DateTime.local();
 
-  days = this.getDays(this.year, this.today.getMonth());
+  weekdays: string[] = Info.weekdays('short').map(
+    (weekday) => weekday[0].toUpperCase() + weekday.substring(1).toLowerCase().replace('.', '')
+  );
 
-  getDays(year: number, month: number ): { weekday: string, days: number[] }[] {
-    const days: { weekday: string, days: number[] }[] = [];
-    const total = new Date(year, month, 0).getDate();
+  firstDay: DateTime = this.today.startOf('month');
+  
+  print() {
+    console.log(this.today.weekday);
+    console.log('first day: ');
+    console.log(this.firstDay);
+    console.log('days: ');
+    console.log(this.days);
+  }
 
-    for (let index = 0; index < this.weekdays.length; index++) {
-      const ds = [];
-      
-      for (let day = 1; day <= total; day++) {
-        const date = new Date(this.year, this.today.getMonth(), day);
-
-        if (date.getDay() === index) {
-          ds.push(day);
-        }
+  days = Interval.fromDateTimes(
+    this.firstDay.startOf('week'),
+    this.firstDay.endOf('month').endOf('week')
+  ).splitBy({ day: 1 }).map(
+    (day) => {
+      if (day.start === null) {
+        throw new Error('Wrong dates')
       }
-      days.push({
-        weekday: this.weekdays[index],
-        days: ds
-      });
-    }
-    // console.log(days);
-    return days;
-  }
-
-  get month(): string {
-    return this.months[this.today.getMonth()];
-  }
-
-  get year(): number {
-    return this.today.getFullYear();
+      return day.start;
+    } 
+  );
+  
+  get month() {
+    const name = this.firstDay.monthLong as string
+    return name[0].toUpperCase() + name.substring(1).toLowerCase();
   }
 }
