@@ -2,10 +2,10 @@
   <div id="header">
     <h6>{{month}}, {{firstDay.year}}</h6>
     <div id="actions">
-      <button type="button">
+      <button type="button" (click)="prevMonth()">
         <ng-icon name="heroChevronLeftMini" size="32"></ng-icon>
       </button>
-      <button type="button" (click)="print()">
+      <button type="button" (click)="nextMonth()">
         <ng-icon name="heroChevronRightMini" size="32" ></ng-icon>
       </button>
     </div>

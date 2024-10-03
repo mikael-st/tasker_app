@@ -30,29 +30,32 @@ export class Calendar {
   );
 
   firstDay: DateTime = this.today.startOf('month');
-  
-  print() {
-    console.log(this.today.weekday);
-    console.log('first day: ');
-    console.log(this.firstDay);
-    console.log('days: ');
-    console.log(this.days);
-  }
 
-  days = Interval.fromDateTimes(
-    this.firstDay.startOf('week'),
-    this.firstDay.endOf('month').endOf('week')
-  ).splitBy({ day: 1 }).map(
-    (day) => {
-      if (day.start === null) {
-        throw new Error('Wrong dates')
-      }
-      return day.start;
-    } 
-  );
+  get days() {
+    const d = Interval.fromDateTimes(
+      this.firstDay.startOf('week'),
+      this.firstDay.endOf('month').endOf('week')
+    ).splitBy({ day: 1 }).map(
+      (day) => {
+        if (day.start === null) {
+          throw new Error('Wrong dates')
+        }
+        return day.start;
+      } 
+    );
+    return d;
+  }
   
   get month() {
     const name = this.firstDay.monthLong as string
     return name[0].toUpperCase() + name.substring(1).toLowerCase();
+  }
+
+  nextMonth() {
+    this.firstDay = this.firstDay.plus({ month: 1 });
+  }
+
+  prevMonth() {
+    this.firstDay = this.firstDay.minus({ month: 1 });
   }
 }
