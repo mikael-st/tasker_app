@@ -1,20 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject, Input, signal, Signal } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroChevronLeftMini, heroChevronRightMini } from '@ng-icons/heroicons/mini';
+import { heroChevronDownMini, heroChevronLeftMini, heroChevronRightMini, heroClipboardMini, heroFlagMini } from '@ng-icons/heroicons/mini';
 import { DateTime, Info, Interval } from 'luxon';
+import { CalendarTag } from './calendar-tag/calendar-tag.component';
+import { EventAccordion } from './event-accordion/event-accordion.component';
 
 @Component({
   selector: 'calendar',
   standalone: true,
   imports: [
     NgIconComponent,
-    CommonModule
+    CommonModule,
+    CalendarTag,
+    EventAccordion
   ],
   providers: [
     provideIcons({
       heroChevronLeftMini,
-      heroChevronRightMini
+      heroChevronRightMini,
+      heroChevronDownMini,
+      heroClipboardMini,
+      heroFlagMini
     })
   ],
   templateUrl: './calendar.component.html',
@@ -23,7 +30,7 @@ import { DateTime, Info, Interval } from 'luxon';
 export class Calendar {
   @Input() class: string = '';
 
-  private today: DateTime = DateTime.local();
+  today: DateTime = DateTime.local();
 
   weekdays: string[] = Info.weekdays('short').map(
     (weekday) => weekday[0].toUpperCase() + weekday.substring(1).toLowerCase().replace('.', '')
@@ -46,9 +53,23 @@ export class Calendar {
     return d;
   }
   
-  get month() {
-    const name = this.firstDay.monthLong as string
-    return name[0].toUpperCase() + name.substring(1).toLowerCase();
+  get month(): { name: string, short: string} {
+    const name = this.firstDay.monthLong as string;
+
+    const short = this.firstDay.monthShort as string;
+
+    return {
+      name: name[0].toUpperCase() + name.substring(1).toLowerCase(),
+      short: short[0].toUpperCase() + short.substring(1).toLowerCase().replace('.', '')
+    };
+  }
+
+  get haveTasks() {
+    return false;
+  }
+
+  get haveEvents() {
+    return false;
   }
 
   nextMonth() {

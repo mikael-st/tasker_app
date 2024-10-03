@@ -1,16 +1,21 @@
 @import '../../../../assets/styles/palette.scss';
 
 .calendar {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: "month month" min-content
+                 "weeks events" 1fr / .75fr .25fr;
   flex: 1 1 auto;
   gap: 20px;
+
+  overflow: hidden;
 
   height: 100%;
   
   padding: 0px 20px;
   
   #header {
+    grid-area: month;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +41,8 @@
   }
 
   #weeks {
+    grid-area: weeks;
+
     display: flex;
     height: 100%; width: 100%;
 
@@ -58,23 +65,42 @@
         #day {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          
-          height: 100%;
+          align-items: center;
+          justify-content: space-evenly;
+
+          width: 100%; height: 100%;
           
           border-bottom: 1px solid $gray;
         
           cursor: pointer;
         }
         
-        .active-day {
+        .active-day p {
           color: white;
         }
         
-        .inactive-day {
+        .inactive-day p {
           color: $gray
+        }
+
+        .today p {          
+          font-weight: 700;
+          font-size: 20px;
+          color: $blue;
         }
       }
     }
+  }
+
+  #events {
+    grid-area: events;
+    
+    overflow-y: scroll;
+    
+    height: 100%;
+
+    padding-left: 10px;
+
+    border-left: 2px solid $items;
   }
 }
