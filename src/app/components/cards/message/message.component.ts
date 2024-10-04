@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Avatar } from '../../avatar/avatar.component';
+import { Avatar } from '../../misc/avatar/avatar.component';
 import { Badge } from '../../labels/badge/badge.component';
 
 @Component({

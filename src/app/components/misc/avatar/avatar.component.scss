@@ -1,10 +1,16 @@
-@import '../../../assets/styles/palette.scss';
+@import '../../../../assets/styles/palette.scss';
 
 :host {
   border-radius: 99999px;
   
   overflow: hidden;
-  
+
+  .indicator {
+    padding: 2px;
+    outline: 2px solid $blue;
+    border-radius: 9999px;
+  }
+
   .avtr-small {
     border-radius: 99999px;
     background-color: $gray;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CreateButton } from '../buttons/create-btn/create-btn.component';
 import { SearchComponent } from '../misc/search/search.component';
-import { Avatar } from '../avatar/avatar.component';
+import { Avatar } from '../misc/avatar/avatar.component';
 import { Team } from '../team/team.component';
 import { ProgressLabel } from '../labels/progress-label/progress-label.component';
 import { ScrollerComponent } from '../misc/scroller/scroller.component';

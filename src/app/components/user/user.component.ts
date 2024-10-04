@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Avatar } from '../avatar/avatar.component';
+import { Avatar } from '../misc/avatar/avatar.component';
 
 @Component({
   selector: 'user',

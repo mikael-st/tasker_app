@@ -13,6 +13,8 @@ import { Component, Input } from '@angular/core';
 export class Avatar {
   @Input() size: 'small' | 'large' | 'medium' = 'medium';
 
+  @Input() online: boolean = false;
+
   get Size(): string {
     return `avtr-${this.size}`;
   }

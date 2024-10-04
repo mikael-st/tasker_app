@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DateLabel } from '../../labels/date-label/date-label.component';
-import { Avatar } from '../../avatar/avatar.component';
+import { Avatar } from '../../misc/avatar/avatar.component';
 
 @Component({
   selector: 'task-card',
