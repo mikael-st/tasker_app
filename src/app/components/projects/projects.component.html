@@ -1,26 +1,24 @@
 <div class="content">
   <create-btn>Create new project</create-btn>
   <search/>
-  <table id="projects">
-    <thead>
-      <tr>
-        <th>Project</th>
-        <th>Owner</th>
-        <th>Progress</th>
-        <th>Started at</th>
-        <th>Members</th>
-      </tr>
-    </thead>
-    <tbody>
+  <div id="projects">
+    <div id="head">
+      <div class="head-cell">Project</div>
+      <div class="head-cell">Owner</div>
+      <div class="head-cell">Stage</div>
+      <div class="head-cell">Started at</div>
+      <div class="head-cell">Members</div>
+    </div >
+    <div id='body'>
       @for (row of rows; track row) {
-        <tr (click)="openProject()">
-          <td>Title</td>
-          <td><avatar size="small"/></td>
-          <td><progress-label/></td>
-          <td>00d:h:min</td>
-          <td><team/></td>
-        </tr>
+        <div id="project" (click)="openProject()">
+          <h6>Title</h6>
+          <user/>
+          <progress-label/>
+          <span>00d:h:min</span>
+          <team/>
+        </div>
       }
-    </tbody>
-  </table>
+    </div>
+  </div>
 </div>
