@@ -18,5 +18,5 @@ import { TaskCard } from '../cards/task-card/task-card.component';
   styleUrl: './workspace.component.scss'
 })
 export class Workspace {
-
+  projects = Array.from({ length: 10 }, (_, i) => i);
 }

@@ -2,50 +2,27 @@
   <div class="recent">
     <h6>Recent</h6>
     <scroller axis="horizontal">
-      <project-card />
-      <project-card />
-      <project-card />
-      <project-card />
-      <project-card />
-      <project-card />
-      <project-card />
-      <project-card />
-      <project-card />
+      @for (project of projects; track $index) {
+        <project-card />
+      }
     </scroller>
   </div>
 
   <div class="friends">
     <h6>Online</h6>
-    <scroller axis="vertical">
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-      <user />
-    </scroller>
+    <div id="scroller">
+      @for (project of projects; track $index) {
+        <user/>
+      }
+    </div>
   </div>
 
   <div class="week">
     <h6>To this Week</h6>
-    <scroller axis="vertical">
-      <task-card />
-      <task-card />
-      <task-card />
-      <task-card />
-      <task-card />
-      <task-card />
-      <task-card />
-      <task-card />
-      <task-card />
-    </scroller>
+    <div id="scroller">
+      @for (project of projects; track $index) {
+        <task-card/>
+      }
+    </div>
   </div>
 </div>
