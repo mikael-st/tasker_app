@@ -3,12 +3,13 @@ import { CreateButton } from '../buttons/create-btn/create-btn.component';
 import { SearchComponent } from '../misc/search/search.component';
 import { Avatar } from '../misc/avatar/avatar.component';
 import { Team } from '../team/team.component';
-import { ProgressLabel } from '../labels/progress-label/progress-label.component';
+import { ProgressLabel } from '../misc/progress-label/progress-label.component';
 import { ScrollerComponent } from '../misc/scroller/scroller.component';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDoubleLeftMini, heroChevronDoubleRightMini } from '@ng-icons/heroicons/mini';
 import { Router } from '@angular/router';
 import { User } from '../user/user.component';
+import { Badge } from "../labels/badge/badge.component";
 
 @Component({
   selector: 'projects',
@@ -20,8 +21,9 @@ import { User } from '../user/user.component';
     Team,
     ProgressLabel,
     ScrollerComponent,
-    NgIconComponent
-  ],
+    NgIconComponent,
+    Badge
+],
   providers: [
     provideIcons({
       heroChevronDoubleLeftMini,

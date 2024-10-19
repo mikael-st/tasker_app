@@ -1,9 +1,9 @@
 @import '../../../../assets/styles/palette.scss';
 
 .project-card {
-  display: grid;
-  grid-auto-flow: row;
-  gap: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   padding: 16px 10px 12px 10px;
 
@@ -17,13 +17,15 @@
     display: grid;
     grid-auto-flow: row;
     gap: 10px;
+  
+    p {
+      height: 85px;
+    }
   }
 
   .infos {
-    display: grid;
-    grid-template: "progress team"
-                   "date date";
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 
     #progress { grid-area: progress; }

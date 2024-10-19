@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './progress-label.component.scss'
 })
 export class ProgressLabel {
+  percent: number = 10;
 
+  get width() {
+    return `width: ${this.percent}%`;
+  }
 }
