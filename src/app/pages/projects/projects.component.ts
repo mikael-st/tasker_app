@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { CreateButton } from '../buttons/create-btn/create-btn.component';
-import { SearchComponent } from '../misc/search/search.component';
-import { Avatar } from '../misc/avatar/avatar.component';
-import { Team } from '../team/team.component';
-import { ProgressLabel } from '../misc/progress-label/progress-label.component';
-import { ScrollerComponent } from '../misc/scroller/scroller.component';
+import { CreateButton } from '../../components/buttons/create-btn/create-btn.component';
+import { SearchComponent } from '../../components/misc/search/search.component';
+import { Avatar } from '../../components/misc/avatar/avatar.component';
+import { Team } from '../../components/team/team.component';
+import { ProgressLabel } from '../../components/misc/progress-label/progress-label.component';
+import { ScrollerComponent } from '../../components/misc/scroller/scroller.component';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDoubleLeftMini, heroChevronDoubleRightMini } from '@ng-icons/heroicons/mini';
 import { Router } from '@angular/router';
-import { User } from '../user/user.component';
-import { Badge } from "../labels/badge/badge.component";
+import { User } from '../../components/user/user.component';
+import { Badge } from "../../components/labels/badge/badge.component";
 
 @Component({
   selector: 'projects',

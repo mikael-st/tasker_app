@@ -1,15 +1,16 @@
 import { Route, Routes } from '@angular/router';
 import { LoginPage } from '../screens/login-page/login-page.component';
 import { Home } from '../screens/home/home.component';
-import { Workspace } from '../components/workspace/workspace.component';
-import { Projects } from '../components/projects/projects.component';
+import { Workspace } from '../pages/workspace/workspace.component';
+import { Projects } from '../pages/projects/projects.component';
 import { Inbox } from '../components/inbox/inbox.component';
 import { Affiliations } from '../components/affiliations/affiliations.component';
-import { ProjectPage } from '../components/project-page/project-page.component';
-import { OverviewComponent } from '../components/project-page/overview/overview.component';
-import { MembersComponent } from '../components/project-page/members/members.component';
-import { TasksComponent } from '../components/project-page/tasks/tasks.component';
-import { Events } from '../components/project-page/events/events.component';
+import { ProjectPage } from '../pages/project-page/project-page.component';
+import { OverviewComponent } from '../pages/project-page/overview/overview.component';
+import { MembersComponent } from '../pages/project-page/members/members.component';
+import { TasksComponent } from '../pages/project-page/tasks/tasks.component';
+import { Events } from '../pages/project-page/events/events.component';
+import { Profile } from '../pages/profile/profile.component';
 
 const ProjectsRoute: Route = {
   path: 'projects',
@@ -78,6 +79,10 @@ export const routes: Routes = [
       {
         path: 'affiliations',
         component: Affiliations
+      },
+      {
+        path: 'profile',
+        component: Profile
       }
     ]
   }

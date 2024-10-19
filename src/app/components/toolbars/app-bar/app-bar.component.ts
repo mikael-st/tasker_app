@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroBellSolid, heroClipboardSolid } from '@ng-icons/heroicons/solid';
 import { Avatar } from '../../misc/avatar/avatar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bar',
@@ -20,5 +21,10 @@ import { Avatar } from '../../misc/avatar/avatar.component';
   styleUrl: './app-bar.component.scss'
 })
 export class AppBar {
+  constructor (private router: Router) {}
+
+  goToProfile() {
+    this.router.navigate(['/home/profile']);
+  }
 
 }
