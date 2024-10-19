@@ -1,6 +1,6 @@
 import { Route, Routes } from '@angular/router';
-import { LoginPage } from '../pages/login-page/login-page.component';
-import { Home } from '../pages/home/home.component';
+import { LoginPage } from '../screens/login-page/login-page.component';
+import { Home } from '../screens/home/home.component';
 import { Workspace } from '../components/workspace/workspace.component';
 import { Projects } from '../components/projects/projects.component';
 import { Inbox } from '../components/inbox/inbox.component';
