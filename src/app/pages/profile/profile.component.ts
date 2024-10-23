@@ -1,12 +1,29 @@
 import { Component } from '@angular/core';
+import { Avatar } from '../../components/misc/avatar/avatar.component';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroChatBubbleOvalLeftSolid } from '@ng-icons/heroicons/solid';
+import { heroUsersMini } from '@ng-icons/heroicons/mini';
+import { ScrollerComponent } from '../../components/misc/scroller/scroller.component';
+import { ProjectCard } from '../../components/cards/project-card/project-card.component';
 
 @Component({
   selector: 'profile',
   standalone: true,
-  imports: [],
+  imports: [
+    Avatar,
+    NgIconComponent,
+    ScrollerComponent,
+    ProjectCard
+  ],
+  providers: [
+    provideIcons({
+      heroChatBubbleOvalLeftSolid,
+      heroUsersMini
+    })
+  ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })
 export class Profile {
-
+  projects = Array.from({ length: 8 }, (_, i) => i);
 }
