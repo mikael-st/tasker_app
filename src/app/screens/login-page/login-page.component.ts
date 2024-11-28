@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { AppLogo } from '../../components/logo/logo.component';
 import { LoginFormComponent } from '../../components/login-form/login-form.component';
 
@@ -12,4 +12,14 @@ import { LoginFormComponent } from '../../components/login-form/login-form.compo
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.scss'
 })
-export class LoginPage {}
+export class LoginPage {
+  @ViewChild('page') container!: ElementRef;
+
+  showInfos() {
+    const rect = this.container.nativeElement.getBoundingClientRect();
+    console.log({
+      width: rect.width,
+      height: rect.height
+    });
+  }
+}
