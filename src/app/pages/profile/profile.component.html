@@ -1,15 +1,28 @@
 <div class="content">
-  <div id="projects">
-    <scroller axis="horizontal">
-      @for (project of projects; track $index) {
-        <project-card />
-      }
-    </scroller>
+  <div id="profile">
+    <div id="bio">
+      <h6>Bio</h6>
+    </div>
+    <div id="projects">
+      <h6>Projects</h6>
+      <div id="head">
+        <div class="head-cell"></div>
+        <div class="head-cell">Owner</div>
+        <div class="head-cell">Stage</div>
+        <div class="head-cell">Started at</div>
+        <div class="head-cell">Members</div>
+      </div >
+      <div id='body'>
+        @for (project of projects; track $index) {
+          <project-item />
+        }
+      </div>
+    </div>
+
   </div>
   <div id="infos">
     <avatar size="large"/>
     <h6 id="name">Name</h6>
-    <p id="bio">Bio</p>
     <div id="affiliations">
       <ng-icon name="heroUsersMini"/>
       {{'00'}} Affiliations

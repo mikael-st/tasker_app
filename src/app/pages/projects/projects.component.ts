@@ -10,6 +10,7 @@ import { heroChevronDoubleLeftMini, heroChevronDoubleRightMini } from '@ng-icons
 import { Router } from '@angular/router';
 import { User } from '../../components/user/user.component';
 import { Badge } from "../../components/labels/badge/badge.component";
+import { ProjectItem } from '../../components/cards/project-item/project-item.component';
 
 @Component({
   selector: 'projects',
@@ -17,12 +18,7 @@ import { Badge } from "../../components/labels/badge/badge.component";
   imports: [
     CreateButton,
     SearchComponent,
-    User,
-    Team,
-    ProgressLabel,
-    ScrollerComponent,
-    NgIconComponent,
-    Badge
+    ProjectItem
 ],
   providers: [
     provideIcons({
@@ -35,12 +31,8 @@ import { Badge } from "../../components/labels/badge/badge.component";
 })
 export class Projects {
   constructor (private router: Router) {}
-  
-  first: number = 0;
-  pages: number = 10;
 
   rows = Array.from({ length: 12 }, (_, i) => i);
-
 
   openProject() {
     this.router.navigate(['/home/project']);

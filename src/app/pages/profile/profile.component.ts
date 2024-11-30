@@ -5,6 +5,7 @@ import { heroChatBubbleOvalLeftSolid } from '@ng-icons/heroicons/solid';
 import { heroUsersMini } from '@ng-icons/heroicons/mini';
 import { ScrollerComponent } from '../../components/misc/scroller/scroller.component';
 import { ProjectCard } from '../../components/cards/project-card/project-card.component';
+import { ProjectItem } from "../../components/cards/project-item/project-item.component";
 
 @Component({
   selector: 'profile',
@@ -12,9 +13,8 @@ import { ProjectCard } from '../../components/cards/project-card/project-card.co
   imports: [
     Avatar,
     NgIconComponent,
-    ScrollerComponent,
-    ProjectCard
-  ],
+    ProjectItem
+],
   providers: [
     provideIcons({
       heroChatBubbleOvalLeftSolid,

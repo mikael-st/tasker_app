@@ -11,13 +11,7 @@
     </div >
     <div id='body'>
       @for (row of rows; track row) {
-        <div id="project" (click)="openProject()">
-          <h6>Title</h6>
-          <user/>
-          <badge content="Pending"/>
-          <span>00d:h:min</span>
-          <team/>
-        </div>
+        <project-item />
       }
     </div>
   </div>

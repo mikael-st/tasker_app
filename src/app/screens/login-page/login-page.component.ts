@@ -1,25 +1,16 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { AppLogo } from '../../components/logo/logo.component';
 import { LoginFormComponent } from '../../components/login-form/login-form.component';
+import { ScaleService } from '../../service/scale.service';
 
 @Component({
   selector: 'login-page',
   standalone: true,
   imports: [
     AppLogo,
-    LoginFormComponent
+    LoginFormComponent,
   ],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.scss'
 })
-export class LoginPage {
-  @ViewChild('page') container!: ElementRef;
-
-  showInfos() {
-    const rect = this.container.nativeElement.getBoundingClientRect();
-    console.log({
-      width: rect.width,
-      height: rect.height
-    });
-  }
-}
+export class LoginPage {}
