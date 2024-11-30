@@ -1,11 +1,10 @@
-<div class="app-bar" (click)="goToProfile()">
+<div class="app-bar">
   <div class="logo">
     <ng-icon name="heroClipboardSolid" size="32"></ng-icon>
     <h6>Tasker</h6>
   </div>
   <div class="user-infos">
     <ng-icon name="heroBellSolid" color="white" size="28"></ng-icon>
-    <!-- <div class="avatar"></div> -->
-    <avatar />
+    <avatar (click)="goToProfile()"/>
   </div>
 </div>
