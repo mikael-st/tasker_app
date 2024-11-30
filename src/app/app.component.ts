@@ -8,7 +8,6 @@ import { LoginPage } from './screens/login-page/login-page.component';
   standalone: true,
   imports: [
     RouterOutlet,
-    LoginPage,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['../styles.scss','./app.component.scss']
